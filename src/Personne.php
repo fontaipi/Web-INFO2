@@ -3,6 +3,7 @@
 final class Personne
 {
 
+    private $id;
     private $nom;
     private $prenom;
     private $date;
@@ -12,9 +13,11 @@ final class Personne
         $this->nom = $nom;
         $this->prenom = $prenom;
         $this->date = $date;
+
+        $this->id = $nom.$prenom.$date->format("Y-m-d");
     }
 
-    public function getId(){
-
+    public function getId(): string {
+        return $this->id;
     }
 }
