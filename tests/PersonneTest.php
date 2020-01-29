@@ -31,4 +31,12 @@ class PersonneTest extends TestCase
         );
     }
 
+    public function testIdPersonneWithAccuentedParameters():void{
+        $personne = new Personne('Dupônt','Héliot',new DateTime('2010-02-21'));
+        $this->assertEquals(
+            "DupontHeliot2010-02-21",
+            $personne->getId()
+        );
+    }
+
 }
